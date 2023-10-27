@@ -1,6 +1,7 @@
 //
 
 import SwiftUI
+import DiscordNowPlaying
 
 @main
 struct MediaActivityApp: App {
@@ -10,5 +11,6 @@ struct MediaActivityApp: App {
     }
     .windowStyle(.hiddenTitleBar)
     .windowResizability(.contentSize)
+    .environment(DiscordNowPlaying())
   }
 }

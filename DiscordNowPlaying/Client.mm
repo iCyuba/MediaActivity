@@ -1,16 +1,15 @@
 //
 
-#import "Discord.h"
-#import "MediaActivity-Swift.h"
+#import "Client.h"
 
 #import <Foundation/Foundation.h>
 
 @implementation DiscordClient
 
-- (id)init {
+- (id)initWithId:(discord::ClientId)clientId {
   // Create the Discord core client
   discord::Core* core{};
-  auto result = discord::Core::Create(1165257733008789554, DiscordCreateFlags_NoRequireDiscord, &core);
+  auto result = discord::Core::Create(clientId, DiscordCreateFlags_NoRequireDiscord, &core);
   self.core = core;
 
   // If the initialization failed for whatever reason, return nil
@@ -28,14 +27,7 @@
   delete self.core;
 }
 
-- (void)setActivity:(NSString *)state :(NSString *)detail :(SInt64)artwork {
-  discord::Activity activity{};
-  activity.SetState(state.UTF8String);
-  activity.SetDetails(detail.UTF8String);
-
-  NSString* url = [NSString stringWithFormat:@"https://itunes-artwork.icy.cx/%lld", artwork];
-  activity.GetAssets().SetLargeImage(url.UTF8String);
-
+- (void)updateActivity:(discord::Activity)activity {
   self.core->ActivityManager().UpdateActivity(activity, nil);
 }
 

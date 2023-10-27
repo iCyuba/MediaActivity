@@ -1,9 +1,10 @@
 //
 
 import SwiftUI
+import DiscordNowPlaying
 
 struct ContentView: View {
-  @State private var info = Info()
+  @Environment(DiscordNowPlaying.self) private var info
 
   private let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
   @State private var date = Date.now
@@ -24,10 +25,9 @@ struct ContentView: View {
             .font(.title2)
         }
 
-        // Album + Artist
-        if let artist = info.artist,
-           let album = info.album {
-          Text("\(artist) — \(album)")
+        // Description (Album + Artist)
+        if let description = info.description {
+          Text(description)
             .font(.headline)
             .lineLimit(1)
         }
@@ -44,8 +44,8 @@ struct ContentView: View {
       }
 
       // App name
-      if let app = info.client?.displayName,
-         let bundle = info.client?.bundleIdentifier {
+      if let app = info.clientDisplayName,
+         let bundle = info.clientBundleIdentifier {
         Text(app)
           .font(.title3)
 
@@ -81,4 +81,5 @@ struct ContentView: View {
 
 #Preview {
   ContentView()
+    .environment(DiscordNowPlaying())
 }

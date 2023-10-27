@@ -2,10 +2,13 @@
 
 import Foundation
 import Dynamic
+import Observation
 
-@Observable @objc public class Info: NSObject {
-  public var client: Client?
+@Observable public class DiscordNowPlaying {
+  private let discordClient = DiscordClient(id: 1165257733008789554)!
 
+  public var clientDisplayName: String?
+  public var clientBundleIdentifier: String?
   public var artwork: Data?
   public var duration: Double?
   public var title: String?
@@ -16,7 +19,16 @@ import Dynamic
   public var id: Int64?
   public var elapsedTime: Double?
 
-  private let discord = DiscordClient()
+  /// Artist + album if available
+  public var description: String? {
+    guard let artist else { return nil }
+
+    if let album {
+      return "\(artist) — \(album)"
+    } else {
+      return artist
+    }
+  }
 
   /// A more accurate elapsedTime
   public var realElapsedTime: Double? {
@@ -37,9 +49,7 @@ import Dynamic
     return min(time, duration)
   }
 
-  public override init() {
-    super.init()
-
+  public init() {
     MRMediaRemoteRegisterForNowPlayingNotifications(.main)
 
     [
@@ -62,14 +72,17 @@ import Dynamic
   /// - Returns: The now playing media information, or nil if nothing is playing.
   public func getInfo() {
     MRMediaRemoteGetNowPlayingInfo(.main) { dict in
-      // Parse the client properties as a Client struct
-      self.client = {
-        if let clientData = dict?["kMRMediaRemoteNowPlayingInfoClientPropertiesData"] as? AnyObject {
-          Client(clientData)
-        } else {
-          nil
-        }
-      }()
+      // Parse the client properties
+      if let clientData = dict?["kMRMediaRemoteNowPlayingInfoClientPropertiesData"] as? AnyObject {
+        let client = Dynamic._MRNowPlayingClientProtobuf.initWithData(clientData)
+
+        self.clientDisplayName = client.displayName.asString
+        self.clientBundleIdentifier = client.bundleIdentifier.asString
+      } else {
+        // If for whatever reason the client wasn't returned, just set both values to nil
+        self.clientDisplayName = nil
+        self.clientBundleIdentifier = nil
+      }
 
       // Retrieve the rest
       self.artwork = dict?["kMRMediaRemoteNowPlayingInfoArtworkData"] as? Data
@@ -82,16 +95,28 @@ import Dynamic
       self.id = dict?["kMRMediaRemoteNowPlayingInfoAlbumiTunesStoreAdamIdentifier"] as? Int64 ?? dict?["kMRMediaRemoteNowPlayingInfoiTunesStoreIdentifier"] as? Int64
       self.elapsedTime = dict?["kMRMediaRemoteNowPlayingInfoElapsedTime"] as? Double
 
-      // Update the discord activity
-      if let title = self.title,
-         let artist = self.artist,
-         let artwork = self.id,
-         self.playbackRate == 1
-      {
-        self.discord.setActivity(artist, title, artwork)
-      } else {
-        self.discord.clearActivity()
+      self.updateDiscordStatus()
+    }
+  }
+
+  public func updateDiscordStatus() {
+    if let title {
+      var activity = discord.Activity()
+      activity.SetDetails(title)
+
+      // Description
+      if let description {
+        activity.SetState(description)
       }
+
+      // Try to set the artwork (only works for iTunes media)
+      if let id {
+        activity.GetAssetsMutating().pointee.SetLargeImage("https://itunes-artwork.icy.cx/\(id)")
+      }
+
+      discordClient.update(activity)
+    } else {
+      discordClient.clearActivity()
     }
   }
 
@@ -101,3 +126,4 @@ import Dynamic
     getInfo()
   }
 }
+
