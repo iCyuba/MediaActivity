@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162401F52AE46C4F00D5A290 /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 162401F42AE46C4F00D5A290 /* Dynamic */; };
+		167172F02ADD60A600A4810D /* MediaActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172EF2ADD60A600A4810D /* MediaActivityApp.swift */; };
+		167172F22ADD60A600A4810D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172F12ADD60A600A4810D /* ContentView.swift */; };
+		167172F42ADD60A900A4810D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167172F32ADD60A900A4810D /* Assets.xcassets */; };
+		167172F72ADD60A900A4810D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167172F62ADD60A900A4810D /* Preview Assets.xcassets */; };
+		1684316A2AE5A04300144F90 /* achievement_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402A82AE56B0A00D5A290 /* achievement_manager.cpp */; };
+		1684316B2AE5A04300144F90 /* activity_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B22AE56B0A00D5A290 /* activity_manager.cpp */; };
+		1684316C2AE5A04300144F90 /* application_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B42AE56B0A00D5A290 /* application_manager.cpp */; };
+		1684316D2AE5A04300144F90 /* core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402AD2AE56B0A00D5A290 /* core.cpp */; };
+		1684316E2AE5A04300144F90 /* image_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402BE2AE56B0A00D5A290 /* image_manager.cpp */; };
+		1684316F2AE5A04300144F90 /* lobby_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B12AE56B0A00D5A290 /* lobby_manager.cpp */; };
+		168431702AE5A04300144F90 /* network_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402AF2AE56B0A00D5A290 /* network_manager.cpp */; };
+		168431712AE5A04300144F90 /* overlay_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B62AE56B0A00D5A290 /* overlay_manager.cpp */; };
+		168431722AE5A04300144F90 /* relationship_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B92AE56B0A00D5A290 /* relationship_manager.cpp */; };
+		168431732AE5A04300144F90 /* storage_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402BA2AE56B0A00D5A290 /* storage_manager.cpp */; };
+		168431742AE5A04300144F90 /* store_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402B02AE56B0A00D5A290 /* store_manager.cpp */; };
+		168431752AE5A04300144F90 /* types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402C12AE56B0B00D5A290 /* types.cpp */; };
+		168431762AE5A04300144F90 /* user_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402A92AE56B0A00D5A290 /* user_manager.cpp */; };
+		168431772AE5A04300144F90 /* voice_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 162402C42AE56B0B00D5A290 /* voice_manager.cpp */; };
+		168431782AE5A04E00144F90 /* Discord.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1624025B2AE496F000D5A290 /* Discord.mm */; };
+		1684317A2AE5A06C00144F90 /* discord_game_sdk.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 162402D32AE56B6300D5A290 /* discord_game_sdk.bundle */; };
+		1684317B2AE5A06C00144F90 /* discord_game_sdk.bundle in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 162402D32AE56B6300D5A290 /* discord_game_sdk.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1684317C2AE5A06C00144F90 /* discord_game_sdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 162402D42AE56B6300D5A290 /* discord_game_sdk.dylib */; };
+		1684317D2AE5A06C00144F90 /* discord_game_sdk.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 162402D42AE56B6300D5A290 /* discord_game_sdk.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		16AC321D2AE3FAEF00BC6E21 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 16AC321C2AE3FAEF00BC6E21 /* .gitignore */; };
+		16B50B962AE4659E005264D4 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B50B932AE4659E005264D4 /* Internal.swift */; };
+		16B50B972AE4659E005264D4 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B50B942AE4659E005264D4 /* Info.swift */; };
+		16B50B982AE4659E005264D4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B50B952AE4659E005264D4 /* Client.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1624031A2AE5843100D5A290 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1684317D2AE5A06C00144F90 /* discord_game_sdk.dylib in Embed Libraries */,
+				1684317B2AE5A06C00144F90 /* discord_game_sdk.bundle in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1624025B2AE496F000D5A290 /* Discord.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Discord.mm; sourceTree = "<group>"; };
+		1624025D2AE4976A00D5A290 /* Discord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Discord.h; sourceTree = "<group>"; };
+		162402A62AE56B0A00D5A290 /* store_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = store_manager.h; path = discord_game_sdk/cpp/store_manager.h; sourceTree = "<group>"; };
+		162402A72AE56B0A00D5A290 /* application_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = application_manager.h; path = discord_game_sdk/cpp/application_manager.h; sourceTree = "<group>"; };
+		162402A82AE56B0A00D5A290 /* achievement_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = achievement_manager.cpp; path = discord_game_sdk/cpp/achievement_manager.cpp; sourceTree = "<group>"; };
+		162402A92AE56B0A00D5A290 /* user_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = user_manager.cpp; path = discord_game_sdk/cpp/user_manager.cpp; sourceTree = "<group>"; };
+		162402AA2AE56B0A00D5A290 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = event.h; path = discord_game_sdk/cpp/event.h; sourceTree = "<group>"; };
+		162402AB2AE56B0A00D5A290 /* network_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = network_manager.h; path = discord_game_sdk/cpp/network_manager.h; sourceTree = "<group>"; };
+		162402AC2AE56B0A00D5A290 /* user_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = user_manager.h; path = discord_game_sdk/cpp/user_manager.h; sourceTree = "<group>"; };
+		162402AD2AE56B0A00D5A290 /* core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = core.cpp; path = discord_game_sdk/cpp/core.cpp; sourceTree = "<group>"; };
+		162402AE2AE56B0A00D5A290 /* lobby_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lobby_manager.h; path = discord_game_sdk/cpp/lobby_manager.h; sourceTree = "<group>"; };
+		162402AF2AE56B0A00D5A290 /* network_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = network_manager.cpp; path = discord_game_sdk/cpp/network_manager.cpp; sourceTree = "<group>"; };
+		162402B02AE56B0A00D5A290 /* store_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = store_manager.cpp; path = discord_game_sdk/cpp/store_manager.cpp; sourceTree = "<group>"; };
+		162402B12AE56B0A00D5A290 /* lobby_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lobby_manager.cpp; path = discord_game_sdk/cpp/lobby_manager.cpp; sourceTree = "<group>"; };
+		162402B22AE56B0A00D5A290 /* activity_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = activity_manager.cpp; path = discord_game_sdk/cpp/activity_manager.cpp; sourceTree = "<group>"; };
+		162402B32AE56B0A00D5A290 /* image_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image_manager.h; path = discord_game_sdk/cpp/image_manager.h; sourceTree = "<group>"; };
+		162402B42AE56B0A00D5A290 /* application_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = application_manager.cpp; path = discord_game_sdk/cpp/application_manager.cpp; sourceTree = "<group>"; };
+		162402B52AE56B0A00D5A290 /* relationship_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = relationship_manager.h; path = discord_game_sdk/cpp/relationship_manager.h; sourceTree = "<group>"; };
+		162402B62AE56B0A00D5A290 /* overlay_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = overlay_manager.cpp; path = discord_game_sdk/cpp/overlay_manager.cpp; sourceTree = "<group>"; };
+		162402B72AE56B0A00D5A290 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = discord_game_sdk/cpp/types.h; sourceTree = "<group>"; };
+		162402B82AE56B0A00D5A290 /* activity_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = activity_manager.h; path = discord_game_sdk/cpp/activity_manager.h; sourceTree = "<group>"; };
+		162402B92AE56B0A00D5A290 /* relationship_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = relationship_manager.cpp; path = discord_game_sdk/cpp/relationship_manager.cpp; sourceTree = "<group>"; };
+		162402BA2AE56B0A00D5A290 /* storage_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = storage_manager.cpp; path = discord_game_sdk/cpp/storage_manager.cpp; sourceTree = "<group>"; };
+		162402BB2AE56B0A00D5A290 /* voice_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = voice_manager.h; path = discord_game_sdk/cpp/voice_manager.h; sourceTree = "<group>"; };
+		162402BC2AE56B0A00D5A290 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = core.h; path = discord_game_sdk/cpp/core.h; sourceTree = "<group>"; };
+		162402BD2AE56B0A00D5A290 /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ffi.h; path = discord_game_sdk/cpp/ffi.h; sourceTree = "<group>"; };
+		162402BE2AE56B0A00D5A290 /* image_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = image_manager.cpp; path = discord_game_sdk/cpp/image_manager.cpp; sourceTree = "<group>"; };
+		162402BF2AE56B0B00D5A290 /* achievement_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = achievement_manager.h; path = discord_game_sdk/cpp/achievement_manager.h; sourceTree = "<group>"; };
+		162402C02AE56B0B00D5A290 /* discord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discord.h; path = discord_game_sdk/cpp/discord.h; sourceTree = "<group>"; };
+		162402C12AE56B0B00D5A290 /* types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = types.cpp; path = discord_game_sdk/cpp/types.cpp; sourceTree = "<group>"; };
+		162402C22AE56B0B00D5A290 /* overlay_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = overlay_manager.h; path = discord_game_sdk/cpp/overlay_manager.h; sourceTree = "<group>"; };
+		162402C32AE56B0B00D5A290 /* storage_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = storage_manager.h; path = discord_game_sdk/cpp/storage_manager.h; sourceTree = "<group>"; };
+		162402C42AE56B0B00D5A290 /* voice_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = voice_manager.cpp; path = discord_game_sdk/cpp/voice_manager.cpp; sourceTree = "<group>"; };
+		162402D32AE56B6300D5A290 /* discord_game_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.bundle; path = discord_game_sdk/lib/aarch64/discord_game_sdk.bundle; sourceTree = "<group>"; };
+		162402D42AE56B6300D5A290 /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.dylib; path = discord_game_sdk/lib/aarch64/discord_game_sdk.dylib; sourceTree = "<group>"; };
+		167172EC2ADD60A600A4810D /* MediaActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		167172EF2ADD60A600A4810D /* MediaActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaActivityApp.swift; sourceTree = "<group>"; };
+		167172F12ADD60A600A4810D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		167172F32ADD60A900A4810D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		167172F62ADD60A900A4810D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		167172F82ADD60A900A4810D /* MediaActivity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MediaActivity.entitlements; sourceTree = "<group>"; };
+		168431792AE5A05A00144F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		16AC321C2AE3FAEF00BC6E21 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		16B50B932AE4659E005264D4 /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
+		16B50B942AE4659E005264D4 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		16B50B952AE4659E005264D4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		16B50B9C2AE46A74005264D4 /* MediaActivity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediaActivity-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		167172E92ADD60A600A4810D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1684317C2AE5A06C00144F90 /* discord_game_sdk.dylib in Frameworks */,
+				162401F52AE46C4F00D5A290 /* Dynamic in Frameworks */,
+				1684317A2AE5A06C00144F90 /* discord_game_sdk.bundle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		162402A52AE56AF600D5A290 /* discord_game_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				162402A82AE56B0A00D5A290 /* achievement_manager.cpp */,
+				162402BF2AE56B0B00D5A290 /* achievement_manager.h */,
+				162402B22AE56B0A00D5A290 /* activity_manager.cpp */,
+				162402B82AE56B0A00D5A290 /* activity_manager.h */,
+				162402B42AE56B0A00D5A290 /* application_manager.cpp */,
+				162402A72AE56B0A00D5A290 /* application_manager.h */,
+				162402AD2AE56B0A00D5A290 /* core.cpp */,
+				162402BC2AE56B0A00D5A290 /* core.h */,
+				162402C02AE56B0B00D5A290 /* discord.h */,
+				162402AA2AE56B0A00D5A290 /* event.h */,
+				162402BD2AE56B0A00D5A290 /* ffi.h */,
+				162402BE2AE56B0A00D5A290 /* image_manager.cpp */,
+				162402B32AE56B0A00D5A290 /* image_manager.h */,
+				162402B12AE56B0A00D5A290 /* lobby_manager.cpp */,
+				162402AE2AE56B0A00D5A290 /* lobby_manager.h */,
+				162402AF2AE56B0A00D5A290 /* network_manager.cpp */,
+				162402AB2AE56B0A00D5A290 /* network_manager.h */,
+				162402B62AE56B0A00D5A290 /* overlay_manager.cpp */,
+				162402C22AE56B0B00D5A290 /* overlay_manager.h */,
+				162402B92AE56B0A00D5A290 /* relationship_manager.cpp */,
+				162402B52AE56B0A00D5A290 /* relationship_manager.h */,
+				162402BA2AE56B0A00D5A290 /* storage_manager.cpp */,
+				162402C32AE56B0B00D5A290 /* storage_manager.h */,
+				162402B02AE56B0A00D5A290 /* store_manager.cpp */,
+				162402A62AE56B0A00D5A290 /* store_manager.h */,
+				162402C12AE56B0B00D5A290 /* types.cpp */,
+				162402B72AE56B0A00D5A290 /* types.h */,
+				162402A92AE56B0A00D5A290 /* user_manager.cpp */,
+				162402AC2AE56B0A00D5A290 /* user_manager.h */,
+				162402C42AE56B0B00D5A290 /* voice_manager.cpp */,
+				162402BB2AE56B0A00D5A290 /* voice_manager.h */,
+			);
+			name = discord_game_sdk;
+			sourceTree = "<group>";
+		};
+		167172E32ADD60A600A4810D = {
+			isa = PBXGroup;
+			children = (
+				162402A52AE56AF600D5A290 /* discord_game_sdk */,
+				167172EE2ADD60A600A4810D /* MediaActivity */,
+				167172ED2ADD60A600A4810D /* Products */,
+				16AC32222AE40C8A00BC6E21 /* Frameworks */,
+				16AC321C2AE3FAEF00BC6E21 /* .gitignore */,
+				16B50B9C2AE46A74005264D4 /* MediaActivity-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		167172ED2ADD60A600A4810D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				167172EC2ADD60A600A4810D /* MediaActivity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		167172EE2ADD60A600A4810D /* MediaActivity */ = {
+			isa = PBXGroup;
+			children = (
+				168431792AE5A05A00144F90 /* Info.plist */,
+				16B50B922AE46588005264D4 /* Apis */,
+				167172EF2ADD60A600A4810D /* MediaActivityApp.swift */,
+				167172F12ADD60A600A4810D /* ContentView.swift */,
+				167172F32ADD60A900A4810D /* Assets.xcassets */,
+				167172F82ADD60A900A4810D /* MediaActivity.entitlements */,
+				167172F52ADD60A900A4810D /* Preview Content */,
+			);
+			path = MediaActivity;
+			sourceTree = "<group>";
+		};
+		167172F52ADD60A900A4810D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				167172F62ADD60A900A4810D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16AC32222AE40C8A00BC6E21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				162402D32AE56B6300D5A290 /* discord_game_sdk.bundle */,
+				162402D42AE56B6300D5A290 /* discord_game_sdk.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16B50B922AE46588005264D4 /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				16B50B952AE4659E005264D4 /* Client.swift */,
+				16B50B942AE4659E005264D4 /* Info.swift */,
+				16B50B932AE4659E005264D4 /* Internal.swift */,
+				1624025D2AE4976A00D5A290 /* Discord.h */,
+				1624025B2AE496F000D5A290 /* Discord.mm */,
+			);
+			path = Apis;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167172EB2ADD60A600A4810D /* MediaActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167172FB2ADD60A900A4810D /* Build configuration list for PBXNativeTarget "MediaActivity" */;
+			buildPhases = (
+				167172E82ADD60A600A4810D /* Sources */,
+				167172E92ADD60A600A4810D /* Frameworks */,
+				167172EA2ADD60A600A4810D /* Resources */,
+				1624031A2AE5843100D5A290 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaActivity;
+			packageProductDependencies = (
+				162401F42AE46C4F00D5A290 /* Dynamic */,
+			);
+			productName = MediaActivity;
+			productReference = 167172EC2ADD60A600A4810D /* MediaActivity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		167172E42ADD60A600A4810D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					167172EB2ADD60A600A4810D = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 167172E72ADD60A600A4810D /* Build configuration list for PBXProject "MediaActivity" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 167172E32ADD60A600A4810D;
+			packageReferences = (
+				16AC32242AE40EC800BC6E21 /* XCRemoteSwiftPackageReference "Dynamic" */,
+			);
+			productRefGroup = 167172ED2ADD60A600A4810D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167172EB2ADD60A600A4810D /* MediaActivity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		167172EA2ADD60A600A4810D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16AC321D2AE3FAEF00BC6E21 /* .gitignore in Resources */,
+				167172F72ADD60A900A4810D /* Preview Assets.xcassets in Resources */,
+				167172F42ADD60A900A4810D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		167172E82ADD60A600A4810D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168431782AE5A04E00144F90 /* Discord.mm in Sources */,
+				1684316A2AE5A04300144F90 /* achievement_manager.cpp in Sources */,
+				1684316B2AE5A04300144F90 /* activity_manager.cpp in Sources */,
+				1684316C2AE5A04300144F90 /* application_manager.cpp in Sources */,
+				1684316D2AE5A04300144F90 /* core.cpp in Sources */,
+				1684316E2AE5A04300144F90 /* image_manager.cpp in Sources */,
+				1684316F2AE5A04300144F90 /* lobby_manager.cpp in Sources */,
+				168431702AE5A04300144F90 /* network_manager.cpp in Sources */,
+				168431712AE5A04300144F90 /* overlay_manager.cpp in Sources */,
+				168431722AE5A04300144F90 /* relationship_manager.cpp in Sources */,
+				168431732AE5A04300144F90 /* storage_manager.cpp in Sources */,
+				168431742AE5A04300144F90 /* store_manager.cpp in Sources */,
+				168431752AE5A04300144F90 /* types.cpp in Sources */,
+				168431762AE5A04300144F90 /* user_manager.cpp in Sources */,
+				168431772AE5A04300144F90 /* voice_manager.cpp in Sources */,
+				167172F22ADD60A600A4810D /* ContentView.swift in Sources */,
+				16B50B972AE4659E005264D4 /* Info.swift in Sources */,
+				16B50B962AE4659E005264D4 /* Internal.swift in Sources */,
+				16B50B982AE4659E005264D4 /* Client.swift in Sources */,
+				167172F02ADD60A600A4810D /* MediaActivityApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		167172F92ADD60A900A4810D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		167172FA2ADD60A900A4810D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+			};
+			name = Release;
+		};
+		167172FC2ADD60A900A4810D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = MediaActivity/MediaActivity.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"MediaActivity/Preview Content\"";
+				DEVELOPMENT_TEAM = R38D4KCQZB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Media Activity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/aarch64",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/x86",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/x86_64",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cx.icy.MediaActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaActivity-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		167172FD2ADD60A900A4810D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = MediaActivity/MediaActivity.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"MediaActivity/Preview Content\"";
+				DEVELOPMENT_TEAM = R38D4KCQZB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Media Activity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/aarch64",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/x86",
+					"$(PROJECT_DIR)/discord_game_sdk/lib/x86_64",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cx.icy.MediaActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MediaActivity-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		167172E72ADD60A600A4810D /* Build configuration list for PBXProject "MediaActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167172F92ADD60A900A4810D /* Debug */,
+				167172FA2ADD60A900A4810D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167172FB2ADD60A900A4810D /* Build configuration list for PBXNativeTarget "MediaActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167172FC2ADD60A900A4810D /* Debug */,
+				167172FD2ADD60A900A4810D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16AC32242AE40EC800BC6E21 /* XCRemoteSwiftPackageReference "Dynamic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mhdhejazi/Dynamic.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		162401F42AE46C4F00D5A290 /* Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AC32242AE40EC800BC6E21 /* XCRemoteSwiftPackageReference "Dynamic" */;
+			productName = Dynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 167172E42ADD60A600A4810D /* Project object */;
+}
