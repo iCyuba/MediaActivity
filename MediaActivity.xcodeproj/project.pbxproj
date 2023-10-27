@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162401F52AE46C4F00D5A290 /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 162401F42AE46C4F00D5A290 /* Dynamic */; };
 		164869222AE97E9C00AEEE10 /* VisualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164869212AE97E9C00AEEE10 /* VisualEffect.swift */; };
+		164869242AEBDD6D00AEEE10 /* Server in Resources */ = {isa = PBXBuildFile; fileRef = 164869232AEBDD6D00AEEE10 /* Server */; };
 		167172F02ADD60A600A4810D /* MediaActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172EF2ADD60A600A4810D /* MediaActivityApp.swift */; };
 		167172F22ADD60A600A4810D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172F12ADD60A600A4810D /* ContentView.swift */; };
 		167172F42ADD60A900A4810D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 167172F32ADD60A900A4810D /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		162402D32AE56B6300D5A290 /* discord_game_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.bundle; path = discord_game_sdk/lib/aarch64/discord_game_sdk.bundle; sourceTree = "<group>"; };
 		162402D42AE56B6300D5A290 /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.dylib; path = discord_game_sdk/lib/aarch64/discord_game_sdk.dylib; sourceTree = "<group>"; };
 		164869212AE97E9C00AEEE10 /* VisualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffect.swift; sourceTree = "<group>"; };
+		164869232AEBDD6D00AEEE10 /* Server */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Server; sourceTree = SOURCE_ROOT; };
 		167172EC2ADD60A600A4810D /* MediaActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		167172EF2ADD60A600A4810D /* MediaActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaActivityApp.swift; sourceTree = "<group>"; };
 		167172F12ADD60A600A4810D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		167172EE2ADD60A600A4810D /* MediaActivity */ = {
 			isa = PBXGroup;
 			children = (
+				164869232AEBDD6D00AEEE10 /* Server */,
 				16B50B922AE46588005264D4 /* Apis */,
 				167172EF2ADD60A600A4810D /* MediaActivityApp.swift */,
 				167172F12ADD60A600A4810D /* ContentView.swift */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16AC321D2AE3FAEF00BC6E21 /* .gitignore in Resources */,
+				164869242AEBDD6D00AEEE10 /* Server in Resources */,
 				167172F42ADD60A900A4810D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
