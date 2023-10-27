@@ -73,6 +73,9 @@ struct ContentView: View {
       }
     }
     .padding()
+    .frame(width: 320, height: 420)
+    .background(VisualEffect().ignoresSafeArea())
+    .preferredColorScheme(.dark)
   }
 }
 

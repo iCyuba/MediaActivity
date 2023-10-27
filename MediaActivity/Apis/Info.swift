@@ -11,9 +11,9 @@ import Dynamic
   public var title: String?
   public var playbackRate: Int16?
   public var album: String?
-  public var albumId: Int64?
   public var timestamp: Date?
   public var artist: String?
+  public var id: Int64?
   public var elapsedTime: Double?
 
   private let discord = DiscordClient()
@@ -77,18 +77,18 @@ import Dynamic
       self.title = dict?["kMRMediaRemoteNowPlayingInfoTitle"] as? String
       self.playbackRate = dict?["kMRMediaRemoteNowPlayingInfoPlaybackRate"] as? Int16
       self.album = dict?["kMRMediaRemoteNowPlayingInfoAlbum"] as? String
-      self.albumId = dict?["kMRMediaRemoteNowPlayingInfoAlbumiTunesStoreAdamIdentifier"] as? Int64
       self.timestamp = dict?["kMRMediaRemoteNowPlayingInfoTimestamp"] as? Date
       self.artist = dict?["kMRMediaRemoteNowPlayingInfoArtist"] as? String
+      self.id = dict?["kMRMediaRemoteNowPlayingInfoAlbumiTunesStoreAdamIdentifier"] as? Int64 ?? dict?["kMRMediaRemoteNowPlayingInfoiTunesStoreIdentifier"] as? Int64
       self.elapsedTime = dict?["kMRMediaRemoteNowPlayingInfoElapsedTime"] as? Double
 
       // Update the discord activity
       if let title = self.title,
          let artist = self.artist,
-         let artwork = self.albumId,
+         let artwork = self.id,
          self.playbackRate == 1
       {
-        self.discord.setActivity(title, artist, artwork)
+        self.discord.setActivity(artist, title, artwork)
       } else {
         self.discord.clearActivity()
       }

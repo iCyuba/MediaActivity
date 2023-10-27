@@ -32,9 +32,8 @@
   discord::Activity activity{};
   activity.SetState(state.UTF8String);
   activity.SetDetails(detail.UTF8String);
-  activity.SetType(discord::ActivityType::Listening);
 
-  NSString *url = [NSString stringWithFormat:@"https://test.icy.cx/%lld", artwork];
+  NSString* url = [NSString stringWithFormat:@"https://itunes-artwork.icy.cx/%lld", artwork];
   activity.GetAssets().SetLargeImage(url.UTF8String);
 
   self.core->ActivityManager().UpdateActivity(activity, nil);
