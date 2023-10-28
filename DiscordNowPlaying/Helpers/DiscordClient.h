@@ -1,10 +1,10 @@
 //
 
-#import "../discord_game_sdk/cpp/discord.h"
+#import "../../discord_game_sdk/cpp/discord.h"
 #import <Foundation/Foundation.h>
 
-#ifndef Client_h
-#define Client_h
+#ifndef DiscordClient_h
+#define DiscordClient_h
 
 @interface DiscordClient : NSObject
 
@@ -17,4 +17,4 @@
 
 @end
 
-#endif /* Client_h */
+#endif /* DiscordClient_h */

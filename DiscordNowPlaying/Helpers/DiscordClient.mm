@@ -1,6 +1,6 @@
 //
 
-#import "Client.h"
+#import "DiscordClient.h"
 
 #import <Foundation/Foundation.h>
 

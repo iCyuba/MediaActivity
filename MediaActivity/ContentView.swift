@@ -35,8 +35,7 @@ struct ContentView: View {
       .padding()
 
       // Artwork
-      if let artwork = info.artwork,
-         let image = NSImage(data: artwork) {
+      if let image = info.artwork?.image {
         Image(nsImage: image)
           .resizable()
           .clipShape(RoundedRectangle(cornerRadius: 16.0))
@@ -44,8 +43,8 @@ struct ContentView: View {
       }
 
       // App name
-      if let app = info.clientDisplayName,
-         let bundle = info.clientBundleIdentifier {
+      if let app = info.client?.displayName,
+         let bundle = info.client?.bundleIdentifier {
         Text(app)
           .font(.title3)
 
