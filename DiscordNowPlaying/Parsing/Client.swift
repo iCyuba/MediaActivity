@@ -13,7 +13,8 @@ extension DiscordNowPlaying {
   /// Parse the client info from a now playing response
   func parseClient(_ dict: NSDictionary?) -> Void {
     // Get the client data
-    guard let data = dict?["kMRMediaRemoteNowPlayingInfoClientPropertiesData"] as? AnyObject
+    guard let data = dict?["kMRMediaRemoteNowPlayingInfoClientPropertiesData"] as? AnyObject,
+          !data.isKind(of: NSNull.self) // Make sure it's not NSNull, which is returned when nothing is playing
     else { return client = nil }
 
     // Initialize the protobuf
