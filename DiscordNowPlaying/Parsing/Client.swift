@@ -8,6 +8,9 @@ extension DiscordNowPlaying {
   public struct Client {
     public var displayName: String?
     public var bundleIdentifier: String
+
+    // Display name that falls back to bundle identifier
+    public var name: String { displayName ?? bundleIdentifier }
   }
 
   /// Parse the client info from a now playing response

@@ -32,25 +32,6 @@ import Swifter
     }
   }
 
-  /// A more accurate elapsedTime
-  public var realElapsedTime: Double? {
-    guard let duration = duration,
-          let playbackRate = playbackRate,
-          let timestamp = timestamp,
-          let elapsedTime = elapsedTime
-    else { return nil }
-
-    // If playback rate is 0 (not playing). Just return the value of elapsedTime
-    if playbackRate == 0 { return elapsedTime }
-
-    // Here we know the media is playing, which means elapsedTime is inaccurate
-    // For that reason, we have to add the date diff between now and the timestamp.
-    let time = elapsedTime - timestamp.timeIntervalSinceNow // "-" cuz the interval is negative
-
-    // Cap time to duration
-    return min(time, duration)
-  }
-
   public init() {
     setupHttpServer()
     registerNotifications()

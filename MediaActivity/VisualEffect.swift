@@ -5,7 +5,7 @@ import SwiftUI
 struct VisualEffect: NSViewRepresentable {
   func makeNSView(context: Self.Context) -> NSView {
     let view = NSVisualEffectView()
-    view.state = NSVisualEffectView.State.active
+    view.state = .active
 
     return view
   }

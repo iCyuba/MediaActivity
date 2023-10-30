@@ -43,33 +43,32 @@ struct ContentView: View {
       }
 
       // App name
-      if let app = info.client?.displayName,
-         let bundle = info.client?.bundleIdentifier {
-        Text(app)
+      if let client = info.client {
+        Text(client.name)
           .font(.title3)
 
-        Text(bundle)
-          .font(.callout)
-          .foregroundStyle(.secondary)
+        // If the text above is showing the app name, show the bundle id beneath it.
+        if client.displayName != nil {
+          Text(client.bundleIdentifier)
+            .font(.callout)
+            .foregroundStyle(.secondary)
+        }
       } else {
         Label("Not playing", systemImage: "speaker.slash.fill")
           .font(.title)
+          .padding()
       }
 
       // Time
-      if let duration = info.duration,
-         let timestamp = info.timestamp,
-         let playbackRate = info.playbackRate {
-        // timeIntervalSince now is negative, so I'm subtracting.
-        // if it's bigger than duration, just show 100%
-        let value = min((info.elapsedTime ?? 0) - (playbackRate <= 0 ? 0.0 : Double(timestamp.timeIntervalSince(date))), duration)
-
-        ProgressView(value: value > duration ? duration : value, total: duration)
+      if let duration = info.duration {
+        ProgressView(value: info.getElapsedTime(for: date), total: info.duration ?? 1)
           .progressViewStyle(.linear)
           .onReceive(timer) { input in
+            // Update the date every 0.5 seconds so the progress bar moves
             date = input
           }
       }
+
     }
     .padding()
     .frame(width: 320, height: 420)

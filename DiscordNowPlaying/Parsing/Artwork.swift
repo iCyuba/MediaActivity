@@ -18,7 +18,7 @@ extension DiscordNowPlaying {
 
     // YouTube sometimes returns tiff, which isn't supported by Discord's cdn, so I'm converting it here.
     public var jpegData: Data? {
-      return NSBitmapImageRep(data: data)?.representation(using: .jpeg, properties: [NSBitmapImageRep.PropertyKey.compressionFactor : 1.0])
+      return NSBitmapImageRep(data: data)?.representation(using: .jpeg, properties: [.compressionFactor : 1.0])
     }
 
     public var hash: CryptoKit.SHA256Digest { CryptoKit.SHA256.hash(data: jpegData ?? data) }
@@ -44,4 +44,5 @@ extension DiscordNowPlaying {
       mimeType: dict?["kMRMediaRemoteNowPlayingInfoArtworkMIMEType"] as? String
     )
   }
+
 }
