@@ -6,8 +6,8 @@ extension DiscordNowPlaying {
 
   /// Update the discord activity based on the current info
   public func updateDiscordStatus() {
-    guard let title
-    else { return discordClient.clearActivity() }
+    guard discordClient != nil else { return }
+    guard title != nil else { return discordClient!.clearActivity() }
 
     var activity = discord.Activity()
     activity.SetDetails(title)
@@ -25,7 +25,7 @@ extension DiscordNowPlaying {
       activity.GetAssetsMutating().pointee.SetLargeImage("https://remote.icyuba.com/\(artwork.hashBase64url)")
     }
 
-    discordClient.update(activity)
+    discordClient!.update(activity)
   }
 
 }

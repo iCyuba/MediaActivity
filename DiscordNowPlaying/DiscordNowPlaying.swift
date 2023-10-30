@@ -6,7 +6,7 @@ import Swifter
 @Observable public class DiscordNowPlaying {
   
   // Internal stuff
-  let discordClient = DiscordClient(id: 1165257733008789554)!
+  let discordClient = DiscordClient(id: 1165257733008789554)
   let httpServer = Swifter.HttpServer()
 
   public var client: Client?
