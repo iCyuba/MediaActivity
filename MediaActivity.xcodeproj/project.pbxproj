@@ -62,7 +62,7 @@
 		16486ABF2AED6E0B00AEEE10 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16486ABE2AED6E0B00AEEE10 /* Notifications.swift */; };
 		167172F02ADD60A600A4810D /* MediaActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172EF2ADD60A600A4810D /* MediaActivityApp.swift */; };
 		167172F22ADD60A600A4810D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167172F12ADD60A600A4810D /* ContentView.swift */; };
-		16ADFFED2AF0451C0009C8F4 /* ElapsedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ADFFEC2AF0451C0009C8F4 /* ElapsedTime.swift */; };
+		16ADFFED2AF0451C0009C8F4 /* Timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ADFFEC2AF0451C0009C8F4 /* Timestamps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +154,7 @@
 		167172F12ADD60A600A4810D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		167172F32ADD60A900A4810D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		167172F82ADD60A900A4810D /* MediaActivity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MediaActivity.entitlements; sourceTree = "<group>"; };
-		16ADFFEC2AF0451C0009C8F4 /* ElapsedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTime.swift; sourceTree = "<group>"; };
+		16ADFFEC2AF0451C0009C8F4 /* Timestamps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,6 @@
 			children = (
 				16486A612AEC4F0900AEEE10 /* discord_game_sdk */,
 				16486A502AEC47D000AEEE10 /* DiscordNowPlaying.swift */,
-				16ADFFEC2AF0451C0009C8F4 /* ElapsedTime.swift */,
 				16486A4E2AEC47D000AEEE10 /* Internal.swift */,
 				16486AC22AED6FDF00AEEE10 /* Parsing */,
 				16486AC32AED700300AEEE10 /* Helpers */,
@@ -248,6 +247,7 @@
 				16486ABE2AED6E0B00AEEE10 /* Notifications.swift */,
 				16486AAC2AED2C1800AEEE10 /* HttpServer.swift */,
 				16486ABA2AED69EF00AEEE10 /* Discord.swift */,
+				16ADFFEC2AF0451C0009C8F4 /* Timestamps.swift */,
 				16486A5B2AEC4E5C00AEEE10 /* DiscordClient.h */,
 				16486A5C2AEC4E5D00AEEE10 /* DiscordClient.mm */,
 			);
@@ -450,7 +450,7 @@
 				16486A9A2AEC4F2800AEEE10 /* image_manager.cpp in Sources */,
 				16486ABB2AED69EF00AEEE10 /* Discord.swift in Sources */,
 				16486A532AEC47D000AEEE10 /* Internal.swift in Sources */,
-				16ADFFED2AF0451C0009C8F4 /* ElapsedTime.swift in Sources */,
+				16ADFFED2AF0451C0009C8F4 /* Timestamps.swift in Sources */,
 				16486ABD2AED6AA900AEEE10 /* Artwork.swift in Sources */,
 				16486A952AEC4F2800AEEE10 /* activity_manager.cpp in Sources */,
 				16486A992AEC4F2800AEEE10 /* user_manager.cpp in Sources */,

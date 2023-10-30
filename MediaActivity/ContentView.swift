@@ -6,9 +6,6 @@ import DiscordNowPlaying
 struct ContentView: View {
   @Environment(DiscordNowPlaying.self) private var info
 
-  private let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
-  @State private var date = Date.now
-
   var body: some View {
     VStack {
       Label("MediaActivity", systemImage: "music.note.list")
@@ -60,13 +57,9 @@ struct ContentView: View {
       }
 
       // Time
-      if let duration = info.duration {
-        ProgressView(value: info.getElapsedTime(for: date), total: info.duration ?? 1)
-          .progressViewStyle(.linear)
-          .onReceive(timer) { input in
-            // Update the date every 0.5 seconds so the progress bar moves
-            date = input
-          }
+      if let start = info.startTimestamp,
+         let end = info.endTimestamp {
+        ProgressView(timerInterval: start...end, countsDown: false)
       }
 
     }
