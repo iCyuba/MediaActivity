@@ -6,7 +6,8 @@ import Swifter
 @Observable public class DiscordNowPlaying {
 
   // Internal stuff
-  let discordClient = DiscordClient(id: 1165257733008789554)
+  var discordClient: DiscordClient?
+  var discordCallbackTimer: Timer?
   var discordDebounceTimer: Timer? // This is used to not spam the discord sdk
   let httpServer = Swifter.HttpServer()
 

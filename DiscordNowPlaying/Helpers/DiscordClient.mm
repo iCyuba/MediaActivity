@@ -13,26 +13,34 @@
   self.core = core;
 
   // If the initialization failed for whatever reason, return nil
-  if (result != discord::Result::Ok) return nil;
+  if (result != discord::Result::Ok) {
+    delete core;
 
-  // Run the callbacks every 1 second
-  [NSTimer scheduledTimerWithTimeInterval:1 repeats:true block:^(NSTimer * _Nonnull timer) {
-    self.core->RunCallbacks();
-  }];
+    return nil;
+  }
+
+  // Save the activity manager
+  self.activity = &core->ActivityManager();
 
   return self;
 }
 
 - (void)dealloc {
+  // Destroy the Discord client
   delete self.core;
 }
 
-- (void)updateActivity:(discord::Activity)activity {
-  self.core->ActivityManager().UpdateActivity(activity, nil);
+- (void)runCallbacks {
+  self.core->RunCallbacks();
 }
 
-- (void)clearActivity {
-  self.core->ActivityManager().ClearActivity(nil);
+- (void)updateActivity:(discord::Activity)activity {
+  self.activity->UpdateActivity(activity, nil);
 }
+
+// Maybe Discord will fix this one day
+//- (void)clearActivity {
+//  self.activity->ClearActivity(ClearActivityCb);
+//}
 
 @end

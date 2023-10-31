@@ -9,11 +9,13 @@
 @interface DiscordClient : NSObject
 
 @property struct discord::Core* core;
+@property struct discord::ActivityManager* activity;
 
 - (id) initWithId:(discord::ClientId)clientId;
 
+- (void) runCallbacks;
 - (void) updateActivity:(discord::Activity)activity;
-- (void) clearActivity;
+//- (void) clearActivity; // This doesn't work. Delete the client instead
 
 @end
 
