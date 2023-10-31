@@ -32,9 +32,14 @@ extension DiscordNowPlaying {
   }
 
   /// Parse all the info about the artwork
-  func parseArtwork(_ dict: NSDictionary?) {
-    guard let data = dict?["kMRMediaRemoteNowPlayingInfoArtworkData"] as? Data
-    else { return artwork = nil }
+  func parseArtwork(_ dict: NSDictionary?, equal: Bool) {
+    guard let data = dict?["kMRMediaRemoteNowPlayingInfoArtworkData"] as? Data else {
+      // If the new data is nil, but the media hasn't changed, keep the old artwork
+      // This happens when you pause the media, for whatever reason.
+      if (!equal) { artwork = nil }
+
+      return
+    }
 
     artwork = Artwork(
       data: data,

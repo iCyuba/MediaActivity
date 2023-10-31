@@ -35,6 +35,11 @@ extension DiscordNowPlaying {
       activity.SetState(description)
     }
 
+    // Time
+    if let endTimestamp {
+      activity.GetTimestampsMutating().pointee.SetEnd(discord.Timestamp(endTimestamp.timeIntervalSince1970))
+    }
+
     // Try to set the iTunes artwork, but fallback to local http server for the artwork
 //    if let id {
 //      activity.GetAssetsMutating().pointee.SetLargeImage("https://itunes-artwork.icy.cx/\(id)")

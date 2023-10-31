@@ -57,9 +57,15 @@ struct ContentView: View {
       }
 
       // Time
-      if let start = info.startTimestamp,
+      if let isPaused = info.isPaused,
+         let duration = info.duration,
+         let start = info.startTimestamp,
          let end = info.endTimestamp {
-        ProgressView(timerInterval: start...end, countsDown: false)
+        if isPaused {
+          ProgressView(value: info.elapsedTime, total: duration)
+        } else {
+          ProgressView(timerInterval: start...end, countsDown: false)
+        }
       }
 
     }

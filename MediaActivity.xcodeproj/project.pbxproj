@@ -237,6 +237,7 @@
 				16486AB42AED487E00AEEE10 /* Client.swift */,
 				16486AB62AED4E8E00AEEE10 /* Info.swift */,
 				16486ABC2AED6AA900AEEE10 /* Artwork.swift */,
+				16ADFFEC2AF0451C0009C8F4 /* Timestamps.swift */,
 			);
 			path = Parsing;
 			sourceTree = "<group>";
@@ -247,7 +248,6 @@
 				16486ABE2AED6E0B00AEEE10 /* Notifications.swift */,
 				16486AAC2AED2C1800AEEE10 /* HttpServer.swift */,
 				16486ABA2AED69EF00AEEE10 /* Discord.swift */,
-				16ADFFEC2AF0451C0009C8F4 /* Timestamps.swift */,
 				16486A5B2AEC4E5C00AEEE10 /* DiscordClient.h */,
 				16486A5C2AEC4E5D00AEEE10 /* DiscordClient.mm */,
 			);
