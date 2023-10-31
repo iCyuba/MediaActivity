@@ -22,8 +22,15 @@ extension DiscordNowPlaying {
       self.id = dict?["kMRMediaRemoteNowPlayingInfoAlbumiTunesStoreAdamIdentifier"] as? Int64 ?? dict?["kMRMediaRemoteNowPlayingInfoiTunesStoreIdentifier"] as? Int64
       self.elapsedTime = dict?["kMRMediaRemoteNowPlayingInfoElapsedTime"] as? Double
 
-      // Update the Discord status
-      self.updateDiscordStatus()
+      // Update the Discord status after like 0.25s
+      // This is because the MediaRemote notifications get spammed like crazy when a change occurs
+      self.discordDebounceTimer?.invalidate()
+      self.discordDebounceTimer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: false) { _ in
+        self.discordDebounceTimer?.invalidate()
+        self.discordDebounceTimer = nil
+
+        self.updateDiscordStatus()
+      }
     }
   }
 
